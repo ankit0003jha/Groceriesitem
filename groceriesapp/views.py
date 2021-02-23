@@ -41,5 +41,5 @@ def Grocery_list(request):
         return JsonResponse(GroceryItem_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
     elif request.method == 'DELETE':
-        count = GroceryItem.objects.all().delete()
-        return JsonResponse({'message': '{} Grocery were deleted successfully!'.format(count[0])}, status=status.HTTP_204_NO_CONTENT)
+        grocery = GroceryItem.objects.all().delete()
+        return JsonResponse({'message': '{} Groceryitem were deleted successfully!'.format(grocery[0])}, status=status.HTTP_204_NO_CONTENT)
