@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/' , include(router.urls)),
     path('', views.index),
-    path('api/Groceries', views.Grocery_list),
+    #path('api/Groceries', views.Grocery_list), ## use when we make use of function based views.
 
 ]
