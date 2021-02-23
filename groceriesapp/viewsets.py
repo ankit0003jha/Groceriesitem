@@ -9,7 +9,7 @@ from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.filters import OrderingFilter
 
 
-### Less no. of code with the help of generic views.
+### Less no. of code with the help of generic views but we make use of viewsets here because we are dealing with models.
 
 
 class GroceriesViewPagination(LimitOffsetPagination):
