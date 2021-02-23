@@ -20,8 +20,8 @@ def index(request):
 
 
   
-### if we dont want to write this much code with the help of function based view or class based view we can simply make use of generic views. That i have 
-### used in viewset.py 
+### if we dont want to write this much code with the help of function based view or class based view we can simply make use of generic views.
+### for the routing purpose i have used viewset.py 
 
 
 
