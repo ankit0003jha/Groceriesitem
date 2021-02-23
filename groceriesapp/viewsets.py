@@ -9,6 +9,8 @@ from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.filters import OrderingFilter
 
 
+### Less no. of code with the help of generic views.
+
 
 class GroceriesViewPagination(LimitOffsetPagination):
     default_limit = 2
