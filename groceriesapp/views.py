@@ -19,6 +19,12 @@ def index(request):
     return HttpResponse(response, content_type='text/json')
 
 
+  
+### if we dont want to write this much code with the help of function based view or class based view we can simply make use of generic views. That i have 
+### used in viewset.py 
+
+
+
 @api_view(['GET', 'POST', 'DELETE'])
 def Grocery_list(request):
     if request.method == 'GET':
