@@ -7,6 +7,8 @@ from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.filters import OrderingFilter
+from rest_framework.authentication import BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
 
 
 ### Less no. of code with the help of generic views but we make use of viewsets here because we are dealing with models.
@@ -24,6 +26,10 @@ class GroceryItemViewset(viewsets.ModelViewSet):
     search_fields = ['title', 'description']
     pagination_class = GroceriesViewPagination
     ordering_fields = ['price', 'createdAt']
+
+    ## Basic authentication
+    authentication_classes = [BasicAuthentication]
+    permission_classes = [IsAuthenticated]
 
 
 
